@@ -72,21 +72,6 @@ lab:
 
 8. このスクリプトの実行中に**演習 1 に進みます**。
 
-> **注** このスクリプトは、完了するまでに約 2 〜 3 分かかります。
-> 
-> SQLPool01 専用 SQL プール (3 つあります) のリンクされたサービスの作成中にスクリプトがハングしたように見える場合は、**Enter** キーを押します。これにより、PowerShell スクリプトが更新され、最後まで続行できます。
->
-> ### 無視できる潜在的なエラー
->
-> スクリプトの実行中に、エラーと警告が発生する場合があります。以下のエラーは無視しても問題ありません。
-> 
-> 1. 次のエラーは、SQL ユーザーを作成し、専用 SQL プールにロールの割り当てを追加するときに発生する可能性があり、無視しても問題ありません。
->
->       *プリンシパル 'xxx@xxx.com' を作成できませんでした。Active Directory アカウントで確立された接続のみが、他の Active Directory ユーザーを作成できます。*
->
->2. 次のエラーも発生する可能性があり、無視しても問題ありません。
->
->       *07-create-wwi-perf-sale-heap with label CTAS : Sale_Heap. null 配列にインデックスを作成できません。*
 
 ## 演習 1 - Synapse Studio でデータの探索を行う
 
@@ -252,9 +237,11 @@ Synapse Studio のプレビュー機能を使用すると、ファイルをす�
 
     ![「開発」ハブで「新しいリソースの追加」 (+) ボタンが表示され、メニューでは「インポート」が強調表示されています。](images/develop-hub-add-new-resource-import.png "Develop hub import notebook")
 
-3. **Explore with Spark.ipynb** ノートブックを C:\dp-203\data-engineering-ilt-deployment\Allfiles\synapse-apache-spark-notebooks フォルダーにインポートします。
+3. **Explore with Spark.ipynb** ノートブックを C:\dp-203\data-engineering-ilt-deployment\Allfiles\synapse-apache-spark-notebooks フォルダーからインポートします。
 
 4. ノートブックに含まれている指示に従って、このタスクの残りを完了し、**SparkPool01** Spark プールに接続します。Spark プールを開始する必要があるため、最初のセルの実行には時間がかかる場合があることに注意してください。 
+
+    **真ん中あたりのセルでエラーが発生しますが、想定された挙動です。**
 
 5. **Explore with Spark** ノートブックを完了したら、ノートブック ツール バーの右側にある「**セッションの停止**」ボタンを選択して、次の演習のために Spark クラスターを解放します。
 
